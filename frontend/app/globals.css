@@ -17,6 +17,16 @@
   }
 }
 
+html.has-scroll-smooth {
+  scroll-behavior: smooth;
+  overflow: hidden;
+}
+
+[data-scroll-container] {
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
