@@ -25,7 +25,7 @@ const SmoothScrollWrapper: React.FC<SmoothScrollWrapperProps> = ({ children }) =
       const scrollInstance = new LocomotiveScrollModule({
         el: scrollRef.current as HTMLElement,
         smooth: true,
-        lerp: 0.05, // smoothness
+        lerp: 0.04, // smoothness
         multiplier: 1.2,
       });
 
