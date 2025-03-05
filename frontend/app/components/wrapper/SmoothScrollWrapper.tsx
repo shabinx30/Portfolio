@@ -4,7 +4,7 @@ import { ReactNode, useEffect, useRef, useState } from "react";
 import dynamic from "next/dynamic";
 
 
-const LocomotiveScroll = dynamic(() => import("locomotive-scroll").then((mod) => mod.default) as any, {
+dynamic(() => import("locomotive-scroll").then((mod) => mod.default) as any, {
   ssr: false,
 });
 
