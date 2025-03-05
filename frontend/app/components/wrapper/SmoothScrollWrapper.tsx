@@ -1,12 +1,28 @@
 "use client";
 
 import { ReactNode, useEffect, useRef, useState } from "react";
-import dynamic from "next/dynamic";
 
+// Define the type for LocomotiveScroll instance
+interface LocomotiveScrollInstance {
+  destroy: () => void;
+  // Add other methods you might use from LocomotiveScroll
+}
 
-dynamic(() => import("locomotive-scroll").then((mod) => mod.default) as any, {
-  ssr: false,
-});
+// Define the constructor type
+interface LocomotiveScrollConstructor {
+  new (options: { 
+    el: HTMLElement; 
+    smooth: boolean;
+    lerp: number;
+    multiplier: number;
+  }): LocomotiveScrollInstance;
+}
+
+// Type assertion for the import
+const loadLocomotiveScroll = () =>
+  import("locomotive-scroll").then(
+    (mod) => mod.default as LocomotiveScrollConstructor
+  );
 
 interface SmoothScrollWrapperProps {
   children: ReactNode;
@@ -14,28 +30,40 @@ interface SmoothScrollWrapperProps {
 
 const SmoothScrollWrapper: React.FC<SmoothScrollWrapperProps> = ({ children }) => {
   const scrollRef = useRef<HTMLDivElement>(null);
-  const [scroll, setScroll] = useState<any>(null);
+  const [scroll, setScroll] = useState<LocomotiveScrollInstance | null>(null);
 
   useEffect(() => {
     if (!scrollRef.current) return;
 
-    const initializeScroll = async () => {
-      const LocomotiveScrollModule = await import("locomotive-scroll").then((mod) => mod.default);
-      
-      const scrollInstance = new LocomotiveScrollModule({
-        el: scrollRef.current as HTMLElement,
-        smooth: true,
-        lerp: 0.04, // smoothness
-        multiplier: 1.2,
-      });
+    let scrollInstance: LocomotiveScrollInstance | null = null;
+    let isMounted = true;
 
-      setScroll(scrollInstance);
+    const initializeScroll = async () => {
+      try {
+        const LocomotiveScrollModule = await loadLocomotiveScroll();
+        
+        if (!isMounted || !scrollRef.current) return;
+
+        scrollInstance = new LocomotiveScrollModule({
+          el: scrollRef.current,
+          smooth: true,
+          lerp: 0.04,
+          multiplier: 1.2,
+        });
+
+        setScroll(scrollInstance);
+      } catch (error) {
+        console.error("Failed to initialize LocomotiveScroll:", error);
+      }
     };
 
     initializeScroll();
 
     return () => {
-      if (scroll) scroll.destroy();
+      isMounted = false;
+      if (scrollInstance) {
+        scrollInstance.destroy();
+      }
     };
   }, []);
 
