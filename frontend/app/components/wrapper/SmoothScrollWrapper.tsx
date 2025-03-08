@@ -62,7 +62,7 @@ const SmoothScrollWrapper: React.FC<SmoothScrollWrapperProps> = ({ children }) =
         // Update scroll instance after initialization
         scrollInstance.update();
       } catch (error) {
-        console.error("Failed to initialize LocomotiveScroll:", error);
+        console.error("Failed to initialize LocomotiveScroll:", error, scroll);
       }
     };
 
