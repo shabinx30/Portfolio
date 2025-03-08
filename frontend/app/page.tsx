@@ -5,7 +5,7 @@ export default function Home() {
 
     return (
         <SmoothScrollWrapper>
-            <div data-scroll-container>
+            <div>
                 <Navbar />
                 <div className="py-[10em] px-[5em]">
                     <p className="pb-[10em] text-[#7d7d7d]">

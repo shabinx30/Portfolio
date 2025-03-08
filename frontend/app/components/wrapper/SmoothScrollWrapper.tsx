@@ -5,7 +5,7 @@ import { ReactNode, useEffect, useRef, useState } from "react";
 // Define the type for LocomotiveScroll instance
 interface LocomotiveScrollInstance {
   destroy: () => void;
-  // Add other methods you might use from LocomotiveScroll
+  update: () => void;
 }
 
 // Define the constructor type
@@ -15,6 +15,9 @@ interface LocomotiveScrollConstructor {
     smooth: boolean;
     lerp: number;
     multiplier: number;
+    direction?: "vertical" | "horizontal";
+    smartphone?: { smooth: boolean };
+    tablet?: { smooth: boolean };
   }): LocomotiveScrollInstance;
 }
 
@@ -46,28 +49,43 @@ const SmoothScrollWrapper: React.FC<SmoothScrollWrapperProps> = ({ children }) =
 
         scrollInstance = new LocomotiveScrollModule({
           el: scrollRef.current,
-          smooth: true,
-          lerp: 0.04,
-          multiplier: 1.2,
+          smooth: true, // Smooth scrolling enabled for desktop
+          lerp: 0.075, // Smoothness for desktop
+          multiplier: 1,
+          direction: "vertical",
+          smartphone: { smooth: false }, // Disable smooth scrolling on smartphones
+          tablet: { smooth: false }, // Disable smooth scrolling on tablets
         });
 
         setScroll(scrollInstance);
+
+        // Update scroll instance after initialization
+        scrollInstance.update();
       } catch (error) {
-        console.error("Failed to initialize LocomotiveScroll:", error, scroll);
+        console.error("Failed to initialize LocomotiveScroll:", error);
       }
     };
 
     initializeScroll();
 
+    // Handle window resize
+    const handleResize = () => {
+      if (scrollInstance) {
+        scrollInstance.update();
+      }
+    };
+    window.addEventListener("resize", handleResize);
+
     return () => {
       isMounted = false;
+      window.removeEventListener("resize", handleResize);
       if (scrollInstance) {
         scrollInstance.destroy();
       }
     };
   }, []);
 
-  return <div ref={scrollRef}>{children}</div>;
+  return <div ref={scrollRef} data-scroll-container>{children}</div>;
 };
 
 export default SmoothScrollWrapper;

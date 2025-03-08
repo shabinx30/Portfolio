@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import {Anonymous_Pro } from "next/font/google";
+import {  Krona_One } from "next/font/google";
 import "./globals.css";
 
 
-const majorMonoDisplay = Anonymous_Pro({
+const majorMonoDisplay = Krona_One({
   weight: "400",
   variable: "--major-mono-display",
   subsets: ["latin"],
