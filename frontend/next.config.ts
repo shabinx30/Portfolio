@@ -2,9 +2,10 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   devIndicators: false,
-  output: 'export', // Enables static exports
+  output: "export",
   images: {
-    unoptimized: true, // Required when using 'export'
+    unoptimized: true,
+    domains: ["instagram.fcok10-4.fna.fbcdn.net"],
   },
 };
 
