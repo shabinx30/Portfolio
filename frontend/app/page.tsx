@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Navbar from "./components/navbar";
 import SmoothScrollWrapper from "./components/wrapper/SmoothScrollWrapper";
+import FlowingMenu from "./components/FlowingMenu/FlowingMenu";
+
 
 
 interface ProfileData {
@@ -16,6 +18,13 @@ export async function generateStaticParams() {
 
 
 export default async function Home() {
+
+    const demoItems = [
+        { link: '#', text: 'Web Development', image: 'https://picsum.photos/600/400?random=1' },
+        { link: '#', text: 'UI/UX', image: 'https://picsum.photos/600/400?random=2' },
+        // { link: '#', text: 'Monterey', image: 'https://picsum.photos/600/400?random=3' },
+        // { link: '#', text: 'Sequoia', image: 'https://picsum.photos/600/400?random=4' }
+    ];
 
     const profile: ProfileData = {
         name: "Shabeen Sharih",
@@ -43,6 +52,9 @@ export default async function Home() {
                 <p className="pb-[10em] text-[#7d7d7d]">
                     {profile.skillsDescription}
                 </p>
+                <div className="w-[75%]" style={{ height: '200px', position: 'relative' }}>
+                    <FlowingMenu items={demoItems} />
+                </div>
                 <p className="pb-[10em] text-[#7d7d7d]">
                     Hello, I&#39;m {profile.name}. {profile.intro}
                 </p>
