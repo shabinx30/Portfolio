@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import {  Krona_One } from "next/font/google";
+import { Krona_One } from "next/font/google";
 import "./globals.css";
 
 
@@ -52,6 +52,9 @@ export const metadata: Metadata = {
   }
 };
 
+
+import AppProvider from "./context/AppContext";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -59,11 +62,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${majorMonoDisplay.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <AppProvider>
+        <body
+          className={`${majorMonoDisplay.variable} antialiased`}
+        >
+          {children}
+        </body>
+      </AppProvider>
     </html>
   );
 }

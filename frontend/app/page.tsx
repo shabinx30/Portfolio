@@ -2,6 +2,8 @@ import Image from "next/image";
 import Navbar from "./components/navbar";
 import SmoothScrollWrapper from "./components/wrapper/SmoothScrollWrapper";
 import FlowingMenu from "./components/FlowingMenu/FlowingMenu";
+import Hero from "./components/Hero";
+import Cursor from "./components/Cursor"
 
 
 
@@ -34,55 +36,45 @@ export default async function Home() {
     };
 
     return (
-        <SmoothScrollWrapper>
+        <>
+            <Cursor/>
             <Navbar />
-            <div className="py-[10em] px-[5em]">
-                <div className="w-[10em]">
-                    <Image
-                        priority
-                        src={profile.img}
-                        alt="profile picture"
-                        width={60}
-                        height={60}
-                    />
-                </div>
-                <p className="pb-[10em] text-[#7d7d7d]">
-                    Hello, I&#39;m {profile.name}. {profile.intro}
-                </p>
-                <p className="pb-[10em] text-[#7d7d7d]">
-                    {profile.skillsDescription}
-                </p>
-                <div className="w-[75%]" style={{ height: '200px', position: 'relative' }}>
-                    <FlowingMenu items={demoItems} />
-                </div>
-                <p className="pb-[10em] text-[#7d7d7d]">
-                    Hello, I&#39;m {profile.name}. {profile.intro}
-                </p>
-                <p className="pb-[10em] text-[#7d7d7d]">
-                    Hello, I&#39;m {profile.name}. {profile.intro}
-                </p>
-                <p className="pb-[10em] text-[#7d7d7d]">
-                    Hello, I&#39;m {profile.name}. {profile.intro}
-                </p>
-                <p className="pb-[10em] text-[#7d7d7d]">
-                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a moreorless normal distribution of letters as opposed to using Content here content here making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text and a search for lorem ipsum will uncover many web sites still in their infancy. Various versions have evolved over the years sometimes by accident sometimes on purpose injected humour and the like.
-                </p>
-                <p className="pb-[10em] text-[#7d7d7d]">
-                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a moreorless normal distribution of letters as opposed to using Content here content here making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text and a search for lorem ipsum will uncover many web sites still in their infancy. Various versions have evolved over the years sometimes by accident sometimes on purpose injected humour and the like.
-                </p>
-                <p className="pb-[10em] text-[#7d7d7d]">
-                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a moreorless normal distribution of letters as opposed to using Content here content here making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text and a search for lorem ipsum will uncover many web sites still in their infancy. Various versions have evolved over the years sometimes by accident sometimes on purpose injected humour and the like.
-                </p>
-                <p className="pb-[10em] text-[#7d7d7d]">
-                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a moreorless normal distribution of letters as opposed to using Content here content here making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text and a search for lorem ipsum will uncover many web sites still in their infancy. Various versions have evolved over the years sometimes by accident sometimes on purpose injected humour and the like.
-                </p>
-                <p className="pb-[10em] text-[#7d7d7d]">
-                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a moreorless normal distribution of letters as opposed to using Content here content here making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text and a search for lorem ipsum will uncover many web sites still in their infancy. Various versions have evolved over the years sometimes by accident sometimes on purpose injected humour and the like.
-                </p>
-                <p className="text-[#7d7d7d]">
-                    {profile.skillsDescription}
-                </p>
-            </div>
-        </SmoothScrollWrapper>
+            <SmoothScrollWrapper>
+                <section className="h-[10vh] bg-[#1cff99]"></section>
+                <Hero/>
+                <section className="py-[10em] px-[5em] bg-black text-white">
+                    {/* <div className="w-[75%]" style={{ height: '200px', position: 'relative' }}>
+                        <FlowingMenu items={demoItems} />
+                    </div> */}
+                    <p className="pb-[10em]">
+                        Hello, I&#39;m {profile.name}. {profile.intro}
+                    </p>
+                    <p className="pb-[10em]">
+                        Hello, I&#39;m {profile.name}. {profile.intro}
+                    </p>
+                    <p className="pb-[10em]">
+                        Hello, I&#39;m {profile.name}. {profile.intro}
+                    </p>
+                    <p className="pb-[10em]">
+                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a moreorless normal distribution of letters as opposed to using Content here content here making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text and a search for lorem ipsum will uncover many web sites still in their infancy. Various versions have evolved over the years sometimes by accident sometimes on purpose injected humour and the like.
+                    </p>
+                    <p className="pb-[10em]">
+                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a moreorless normal distribution of letters as opposed to using Content here content here making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text and a search for lorem ipsum will uncover many web sites still in their infancy. Various versions have evolved over the years sometimes by accident sometimes on purpose injected humour and the like.
+                    </p>
+                    <p className="pb-[10em]">
+                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a moreorless normal distribution of letters as opposed to using Content here content here making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text and a search for lorem ipsum will uncover many web sites still in their infancy. Various versions have evolved over the years sometimes by accident sometimes on purpose injected humour and the like.
+                    </p>
+                    <p className="pb-[10em]">
+                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a moreorless normal distribution of letters as opposed to using Content here content here making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text and a search for lorem ipsum will uncover many web sites still in their infancy. Various versions have evolved over the years sometimes by accident sometimes on purpose injected humour and the like.
+                    </p>
+                    <p className="pb-[10em]">
+                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a moreorless normal distribution of letters as opposed to using Content here content here making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text and a search for lorem ipsum will uncover many web sites still in their infancy. Various versions have evolved over the years sometimes by accident sometimes on purpose injected humour and the like.
+                    </p>
+                    <p className="">
+                        {profile.skillsDescription}
+                    </p>
+                </section>
+            </SmoothScrollWrapper>
+        </>
     );
 }
