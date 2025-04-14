@@ -7,12 +7,6 @@ export default function Navbar() {
 
     const { isInView, setIsPointer } = useAppContext()
 
-    const handleClick = () => {
-        setIsPointer(true)
-        setTimeout(() => {
-            setIsPointer(false)
-        },200)
-    }
 
     return (
         <>

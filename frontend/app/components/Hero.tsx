@@ -40,7 +40,7 @@ const Hero = () => {
                         </div>
                         <div className="bottom">
                             <h1 className="text-[8em] leading-[.8] cu-head">
-                                I'M SHABEEN SHARIH
+                                I&apos;M SHABEEN SHARIH
                             </h1>
                         </div>
                     </motion.div>
