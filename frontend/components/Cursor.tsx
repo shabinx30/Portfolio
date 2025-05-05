@@ -18,7 +18,7 @@ export default function CustomCursor() {
 
     return (
         <motion.div
-            className={`flex justify-center items-center pointer-events-none fixed top-0 left-0 z-[9999] ${isPointer ? 'w-18' : 'w-5'} h-5 rounded-full mix-blend-difference bg-white`}
+            className={`flex justify-center bg-[#3535   35] items-center pointer-events-none fixed top-0 left-0 z-[9999] ${isPointer ? 'w-18' : 'w-5'} h-5 rounded-full mix-blend-difference bg-white`}
             animate={{
                 x: position.x, // center the cursor
                 y: position.y,

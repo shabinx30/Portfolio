@@ -1,8 +1,8 @@
-import Navbar from "./components/navbar";
-import SmoothScrollWrapper from "./components/wrapper/SmoothScrollWrapper";
+import Navbar from "../components/navbar";
+import SmoothScrollWrapper from "../components/wrapper/SmoothScrollWrapper";
 // import FlowingMenu from "./components/FlowingMenu/FlowingMenu";
-import Hero from "./components/Hero";
-import Cursor from "./components/Cursor"
+import Hero from "../components/Hero";
+import Cursor from "../components/Cursor"
 
 
 

@@ -53,7 +53,7 @@ export const metadata: Metadata = {
 };
 
 
-import AppProvider from "./context/AppContext";
+import AppProvider from "../context/AppContext";
 
 export default function RootLayout({
   children,
