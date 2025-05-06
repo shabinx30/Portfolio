@@ -11,7 +11,7 @@ const Hero = () => {
                     <h1 className="text-4xl text-[#C2FF78] mb-2">HELLO,</h1>
                     <h1 className="text-5xl">I'M SHABEEN SHARIH</h1>
                     <p className="text-[#AEAEAE] text-[0.8em] mt-8">
-                        I'm a highly passionate web developer, constantly
+                        I&apos;m a highly passionate web developer, constantly
                         challenging my problem-solving skills and striving for
                         consistency. Every day, I work diligently to enhance my
                         abilities and grow in my craft.
