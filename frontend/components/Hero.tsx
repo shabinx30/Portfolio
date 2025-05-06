@@ -9,7 +9,7 @@ const Hero = () => {
             <div className="absolute flex justify-center pt-[14%] bg-[black]/30 z-40 backdrop-blur-[50px] h-[116dvh] w-[100vw]">
                 <div className="text-center w-[47%]">
                     <h1 className="text-4xl text-[#C2FF78] mb-2">HELLO,</h1>
-                    <h1 className="text-5xl">I'M SHABEEN SHARIH</h1>
+                    <h1 className="text-5xl">I&apos;M SHABEEN SHARIH</h1>
                     <p className="text-[#AEAEAE] text-[0.8em] mt-8">
                         I&apos;m a highly passionate web developer, constantly
                         challenging my problem-solving skills and striving for
