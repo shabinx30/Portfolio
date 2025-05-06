@@ -1,7 +1,8 @@
-import Navbar from "../components/navbar";
-import SmoothScrollWrapper from "../components/wrapper/SmoothScrollWrapper";
+// import Navbar from "../components/navbar";
+// import SmoothScrollWrapper from "../components/wrapper/SmoothScrollWrapper";
 // import FlowingMenu from "./components/FlowingMenu/FlowingMenu";
 import Hero from "../components/Hero";
+import Project from "@/components/Project";
 
 
 
@@ -35,11 +36,11 @@ export default async function Home() {
 
     return (
         <>
-            <Navbar />
-            <SmoothScrollWrapper>
+            {/* <Navbar /> */}
+            {/* <SmoothScrollWrapper> */}
                 <Hero />
-                <section className="w-[100vw] h-[50vh] bg-black"/>
-            </SmoothScrollWrapper>
+                <Project />
+            {/* </SmoothScrollWrapper> */}
         </>
     );
 }
