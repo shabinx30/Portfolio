@@ -20,7 +20,7 @@ const Navbar = () => {
 
     return (
         <motion.nav
-            className="fixed z-[100] w-full flex justify-center items-center pt-5 text-[0.8em] text-[#C2FF78]"
+            className="fixed z-[100] w-[100dvw] flex justify-center items-center pt-5 text-[0.7em] lg:text-[0.8em] text-[#C2FF78] select-none"
             initial={{ y: -100 }}
             animate={{ y: 0 }}
             transition={{
@@ -31,7 +31,7 @@ const Navbar = () => {
                 delay: 0.5,
             }}
         >
-            <ul className="w-[40%] bg-[#282828] flex justify-between px-[3.4vw] items-center rounded-full py-4">
+            <ul className="w-[80%] md:w-[60%] lg:w-[40%] bg-[#282828] flex justify-between px-[3.4vw] items-center rounded-full py-4">
                 <li className="cursor-pointer" onClick={handleScroll}>PROJECTS</li>
                 <li className="cursor-pointer">SKILLS</li>
                 <li className="cursor-pointer">CONTACT</li>

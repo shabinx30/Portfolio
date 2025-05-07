@@ -6,8 +6,8 @@
 } */
 
 :root {
-  --background: #ffffff;
-  --foreground: #000;
+  --background: #000;
+  --foreground: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -40,6 +40,7 @@ body {
   height: 100%;
   font-family: "Krona One", sans-serif;
   font-style: normal;
+  -webkit-tap-highlight-color: transparent;
 }
 
 [data-scroll-container] {
