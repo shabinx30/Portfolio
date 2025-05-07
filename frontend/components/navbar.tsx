@@ -5,7 +5,7 @@ import React from "react";
 
 import { useAppContext } from "@/context/AppContext";
 
-const navbar = () => {
+const Navbar = () => {
     const { projectRef, scroll } = useAppContext();
 
     const handleScroll = () => {
@@ -40,4 +40,4 @@ const navbar = () => {
     );
 };
 
-export default navbar;
+export default Navbar;
