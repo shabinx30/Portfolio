@@ -18,6 +18,11 @@ const Hero = () => {
                     </p>
                 </div>
             </div>
+            <div className="absolute bottom-[-3em] z-50 flex justify-center items-center w-full">
+                <h1 className="text-white text-4xl">
+                    PROJECTS
+                </h1>
+            </div>
             <motion.div
                 className="absolute bottom-[22%] right-[0%] rotate-[20deg] bg-[#8CFF00] w-[10em] h-[50%] rounded-full"
                 animate={{ y: ["10%", "-10%", "10%"] }}

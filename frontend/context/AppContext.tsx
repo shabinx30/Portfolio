@@ -10,7 +10,7 @@ import {
     RefObject,
 } from "react";
 import type LocomotiveScroll from "locomotive-scroll";
-import Navbar from "@/components/navbar";
+import Navbar from "@/components/Navbar";
 
 interface AppContextType {
     projectRef: RefObject<HTMLDivElement | null>;
