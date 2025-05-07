@@ -1,11 +1,14 @@
 "use client";
 
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
 const Hero = () => {
+    const sectionRef = useRef(null);
+    const isInView = useInView(sectionRef, { margin: "-20% 0px" });
+
     return (
-        <section className="relative h-[100dvh] w-[100vw] bg-black">
+        <section ref={sectionRef} className="relative h-[100dvh] w-[100vw] bg-black">
             <div className="absolute flex justify-center pt-[14%] bg-[black]/30 z-40 backdrop-blur-[50px] h-[116dvh] w-[100vw]">
                 <div className="text-center w-[47%]">
                     <h1 className="text-4xl text-[#C2FF78] mb-2">HELLO,</h1>
@@ -19,13 +22,11 @@ const Hero = () => {
                 </div>
             </div>
             <div className="absolute bottom-[-3em] z-50 flex justify-center items-center w-full">
-                <h1 className="text-white text-4xl">
-                    PROJECTS
-                </h1>
+                <h1 className="text-white text-4xl">PROJECTS</h1>
             </div>
             <motion.div
                 className="absolute bottom-[22%] right-[0%] rotate-[20deg] bg-[#8CFF00] w-[10em] h-[50%] rounded-full"
-                animate={{ y: ["10%", "-10%", "10%"] }}
+                animate={isInView ? { y: ["10%", "-10%", "10%"] } : { y: 0 }}
                 transition={{
                     duration: 5,
                     repeat: Infinity,
@@ -35,7 +36,7 @@ const Hero = () => {
             <div className="absolute bottom-[-2%] right-[3em] rotate-[75deg] bg-[#8CFF00] w-[14em] h-[50%] rounded-full" />
             <motion.div
                 className="absolute bottom-0 right-[26%] rotate-[-25deg] bg-[#8CFF00] w-[18%] h-[40%] rounded-full"
-                animate={{ x: ["5%", "-5%", "5%"] }}
+                animate={isInView ? { x: ["5%", "-5%", "5%"] } : { x: 0 }}
                 transition={{
                     duration: 5,
                     repeat: Infinity,
@@ -46,7 +47,7 @@ const Hero = () => {
             <div className="absolute bottom-0 right-[20%] bg-[#8CFF00] w-[8em] h-[30%] rounded-full" />
             <motion.div
                 className="absolute bottom-8 left-0 rotate-[65deg] bg-[#8CFF00] w-[20%] h-[30%] rounded-full"
-                animate={{ x: ["10%", "-10%", "10%"] }}
+                animate={isInView ? { x: ["10%", "-10%", "10%"] } : { x: 0 }}
                 transition={{
                     duration: 5,
                     repeat: Infinity,
@@ -58,7 +59,7 @@ const Hero = () => {
             <div className="absolute bottom-4 left-[16%] rotate-[10deg] bg-[#8CFF00] w-[20%] h-[10%] rounded-full" />
             <motion.div
                 className="absolute bottom-2 left-[40%]  bg-[#8CFF00] w-[20%] h-[15%] rounded-full"
-                animate={{ x: ["10%", "-10%", "10%"] }}
+                animate={isInView ? { x: ["10%", "-10%", "10%"] } : { x: 0 }}
                 transition={{
                     duration: 5,
                     repeat: Infinity,
