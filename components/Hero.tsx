@@ -13,7 +13,7 @@ const Hero = () => {
                 <div className="text-center pt-[30%] md:p-0 w-[90%] lg:w-[47%]">
                     <h1 className="text-2xl lg:text-4xl text-[#C2FF78] mb-2">HELLO,</h1>
                     <h1 className="text-3xl lg:text-5xl">I&apos;M SHABEEN SHARIH</h1>
-                    <p className="text-[#AEAEAE] text-[0.65em] lg:text-[0.8em] mt-8">
+                    <p className="text-[#AEAEAE] text-[0.65em] font-mono lg:text-[0.825em] mt-8">
                         I&apos;m a highly passionate <span className="text-[#C2FF78]">web developer</span>, constantly
                         challenging my problem-solving skills and striving for
                         consistency. Every day, I work diligently to enhance my

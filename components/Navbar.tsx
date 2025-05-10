@@ -12,7 +12,7 @@ const Navbar = () => {
         if (scroll && projectRef.current) {
             scroll.scrollTo(projectRef?.current, {
                 offset: -100,
-                duration: 500,
+                duration: 350,
                 easing: [0.25, 0.0, 0.35, 1.0],
             });
         }
