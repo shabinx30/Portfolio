@@ -40,7 +40,8 @@ const AppProvider = ({ children }: { children: ReactNode }) => {
                 lerp: 0.075,
                 multiplier: 1,
                 direction: "vertical",
-                smartphone: { smooth: false },
+                smartphone: { smooth: false }, 
+                tablet: { smooth: false, breakpoint: 1024 },
             });
 
             setScroll(scrollInstance);
