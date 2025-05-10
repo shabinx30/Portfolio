@@ -1,24 +1,11 @@
 "use client";
 
-import React, { useRef } from "react";
+import React from "react";
 import Image from "next/image";
 import { useAppContext } from "@/context/AppContext";
 
 const Project = () => {
     const { projectRef } = useAppContext();
-    // const videoRef = useRef<HTMLVideoElement>(null)
-
-    // navigator.mediaDevices.getUserMedia({ video: true })
-    // .then((stream) => {
-    //     if(videoRef.current) {
-    //         videoRef.current.srcObject = stream;
-    //     }
-    // })
-    // .catch((err) => {
-    //   console.error('Error accessing camera:', err);
-    // });
-
-    const pjs = [1,];
 
     return (
         <section
