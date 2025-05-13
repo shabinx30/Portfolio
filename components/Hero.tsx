@@ -40,10 +40,10 @@ const Hero = () => {
                         HELLO,
                     </h1>
                     <h1 className="text-3xl lg:text-5xl text-transparent bg-clip-text bg-gradient-to-r to-white/50 via-white from-white/50">
-                        I'M SHABEEN SHARIH
+                        I&apos;M SHABEEN SHARIH
                     </h1>
                     <p className="text-[#AEAEAE] text-[0.65em] font-mono lg:text-[0.825em] mt-8">
-                        I'm a highly passionate{" "}
+                        I&apos;m a highly passionate{" "}
                         <span className="text-[#C2FF78]">web developer</span>,
                         constantly challenging my problem-solving skills and
                         striving for consistency. Every day, I work diligently
