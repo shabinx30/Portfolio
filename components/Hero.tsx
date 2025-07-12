@@ -2,6 +2,9 @@
 
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
+import Link from "next/link";
 
 const Hero = () => {
     const sectionRef = useRef(null);
@@ -32,23 +35,28 @@ const Hero = () => {
     return (
         <section
             ref={sectionRef}
-            className="relative h-[100dvh] w-[100vw] bg-black"
+            className="relative h-[100dvh] w-[100vw] bg-white dark:bg-black"
         >
-            <div className="absolute flex justify-center pt-[14%] bg-black/30 z-40 backdrop-blur-[50px] h-[114dvh] w-[100vw]">
+            <div className="absolute flex justify-center pt-[14%] dark:bg-black/30 z-40 backdrop-blur-[50px] h-[114dvh] w-[100vw]">
                 <div className="text-center pt-[30%] md:p-0 w-[90%] lg:w-[47%]">
-                    <h1 className="text-2xl lg:text-4xl text-[#C2FF78] mb-2">
-                        HELLO,
+                    <h1 className="text-2xl lg:text-4xl HN-medium mb-2 dark:text-transparent bg-clip-text text-black dark:bg-gradient-to-b from-[#C2FF78] to-[#C2FF78]/30">
+                        Hello,
                     </h1>
-                    <h1 className="text-3xl lg:text-5xl text-transparent bg-clip-text bg-gradient-to-r to-white/50 via-white from-white/50">
-                        I&apos;M SHABEEN SHARIH
+                    <h1 className="text-3xl lg:text-[4.12em] dark:text-transparent HN-medium font-extralight bg-clip-text text-black dark:bg-gradient-to-r to-white/30 via-white from-white/30">
+                        I&apos;m Shabeen Sharih
                     </h1>
-                    <p className="text-[#AEAEAE] text-[0.65em] font-mono lg:text-[0.825em] mt-8">
-                        I&apos;m a highly passionate{" "}
-                        <span className="text-[#C2FF78]">web developer</span>,
+                    <p className="text-[#7b7b7b] dark:text-[#AEAEAE] text-[0.65em] font-semibold lg:text-[0.825em] mt-8">
+                        A highly passionate{" "}
+                        <span className="dark:text-[#C2FF78] text-black font-bold">web developer</span>,
                         constantly challenging my problem-solving skills and
                         striving for consistency. Every day, I work diligently
                         to enhance my abilities and grow in my craft.
                     </p>
+                    <div className="flex gap-6 justify-center mt-6 dark:text-white/50">
+                        <Link href="https://www.linkedin.com/in/shabeen-sharih/"><FaLinkedin size={20} className="hover:text-white duration-150"/></Link>
+                        <Link href="https://github.com/shabinx30"><FaGithub size={20} className="hover:text-white duration-150" /></Link>
+                        <Link href="mailto:shabeensharih@gmail.com"><SiGmail size={20} className="hover:text-white duration-150" /></Link>
+                    </div>
                 </div>
             </div>
 
@@ -59,8 +67,8 @@ const Hero = () => {
                 animate={isProjectsInView ? "visible" : "hidden"}
                 variants={projectsVariants}
             >
-                <h1 className="text-white text-2xl lg:text-3xl px-[2em] md:px-[3em]">
-                    RECENT PROJECTS
+                <h1 className="text-2xl HN-medium lg:text-[1.6em] px-[2em] md:px-[3em]">
+                    Recent Projects
                 </h1>
             </motion.div>
 

@@ -11,9 +11,6 @@ import { useAnimation, useInView } from "framer-motion";
 const Project = () => {
     const { projectRef } = useAppContext();
 
-
-
-
     const inView = useInView(projectRef, { amount: 0.25 });
     const controls = useAnimation();
 
@@ -28,14 +25,7 @@ const Project = () => {
     return (
         <motion.section
             id="projectsec"
-            ref={projectRef}
-            initial="hidden"
-            animate={controls}
-            variants={{
-                hidden: { opacity: 0, y: 50 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-            }}
-            className="w-[100dvw] relative h-[150vh] pt-[8em] "
+            className="w-[100dvw] relative h-[150vh] pt-[8em]"
         >
             <div
                 data-scroll
@@ -46,7 +36,20 @@ const Project = () => {
                 <h1>background mone text</h1>
             </div>
             {/* projects */}
-            <div className="absolute px-[2em] md:px-[4em]">
+            <motion.div
+                className="absolute px-[2em] md:px-[4em]"
+                ref={projectRef}
+                initial="hidden"
+                animate={controls}
+                variants={{
+                    hidden: { opacity: 0, y: 50 },
+                    visible: {
+                        opacity: 1,
+                        y: 0,
+                        transition: { duration: 0.6 },
+                    },
+                }}
+            >
                 <div className="block md:flex md:relative lg:justify-between gap-4">
                     <div className="block rounded-2xl md:w-[46%]">
                         <Image
@@ -58,7 +61,7 @@ const Project = () => {
                             height={90}
                         />
                         <div className="flex justify-between py-3">
-                            <button className="flex items-center gap-2 text-sm border border-white rounded-3xl px-4 cursor-pointer">
+                            <button className="flex items-center gap-2 text-sm border dark:border-white rounded-3xl px-4 cursor-pointer">
                                 <HiOutlineExternalLink size={20} />
                                 Live
                             </button>
@@ -68,7 +71,7 @@ const Project = () => {
                                     Freelacing platform
                                 </p>
                             </div>
-                            <button className="flex items-center gap-2 text-sm border border-white rounded-3xl px-4 cursor-pointer">
+                            <button className="flex items-center gap-2 text-sm border dark:border-white rounded-3xl px-4 cursor-pointer">
                                 <FaGithub size={20} />
                                 Github
                             </button>
@@ -84,7 +87,7 @@ const Project = () => {
                             height={90}
                         />
                         <div className="flex justify-between py-3">
-                            <button className="flex items-center gap-2 text-sm border border-white rounded-3xl px-4 cursor-pointer">
+                            <button className="flex items-center gap-2 text-sm border dark:border-white rounded-3xl px-4 cursor-pointer">
                                 <HiOutlineExternalLink size={20} />
                                 Live
                             </button>
@@ -96,7 +99,7 @@ const Project = () => {
                                     Entertainment platform
                                 </p>
                             </div>
-                            <button className="flex items-center gap-2 text-sm border border-white rounded-3xl px-4 cursor-pointer">
+                            <button className="flex items-center gap-2 text-sm border dark:border-white rounded-3xl px-4 cursor-pointer">
                                 <FaGithub size={20} />
                                 Github
                             </button>
@@ -114,7 +117,7 @@ const Project = () => {
                             height={90}
                         />
                         <div className="flex justify-between py-3">
-                            <button className="flex items-center gap-2 text-sm border border-white rounded-3xl px-4 cursor-pointer">
+                            <button className="flex items-center gap-2 text-sm border dark:border-white rounded-3xl px-4 cursor-pointer">
                                 <HiOutlineExternalLink size={20} />
                                 Live
                             </button>
@@ -124,7 +127,7 @@ const Project = () => {
                                     Freelacing platform
                                 </p>
                             </div>
-                            <button className="flex items-center gap-2 text-sm border border-white rounded-3xl px-4 cursor-pointer">
+                            <button className="flex items-center gap-2 text-sm border dark:border-white rounded-3xl px-4 cursor-pointer">
                                 <FaGithub size={20} />
                                 Github
                             </button>
@@ -140,7 +143,7 @@ const Project = () => {
                             height={90}
                         />
                         <div className="flex justify-between py-3">
-                            <button className="flex items-center gap-2 text-sm border border-white rounded-3xl px-4 cursor-pointer">
+                            <button className="flex items-center gap-2 text-sm border dark:border-white rounded-3xl px-4 cursor-pointer">
                                 <HiOutlineExternalLink size={20} />
                                 Live
                             </button>
@@ -152,14 +155,14 @@ const Project = () => {
                                     Entertainment platform
                                 </p>
                             </div>
-                            <button className="flex items-center gap-2 text-sm border border-white rounded-3xl px-4 cursor-pointer">
+                            <button className="flex items-center gap-2 text-sm border dark:border-white rounded-3xl px-4 cursor-pointer">
                                 <FaGithub size={20} />
                                 Github
                             </button>
                         </div>
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </motion.section>
     );
 };
