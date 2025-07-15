@@ -45,7 +45,7 @@ const Navbar = () => {
                 damping: 25,
             }}
         >
-            <ul className="w-[80%] md:w-[60%] lg:w-[60%] bg-[#B0FF62] dark:bg-[#cfcfcf] dark:text-black shadow-2xl flex justify-around items-center rounded-3xl py-4">
+            <ul className="w-[80%] md:w-[60%] lg:w-[50%] bg-[#B0FF62] dark:bg-[#cfcfcf] dark:text-black shadow-2xl flex justify-around items-center rounded-3xl py-4">
                 <li className="cursor-pointer">HOME</li>
                 <li className="cursor-pointer" onClick={() => handleScroll(skillsRef)}>SKILLS</li>
                 <li className="cursor-pointer" onClick={() => handleScroll(projectsRef)}>
