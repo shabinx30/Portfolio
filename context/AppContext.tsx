@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import {
     createContext,
@@ -14,7 +14,7 @@ import Navbar from "@/components/Navbar";
 
 interface AppContextType {
     projectRef: RefObject<HTMLDivElement | null>;
-    scroll: LocomotiveScroll | null
+    scroll: LocomotiveScroll | null;
 }
 
 const AppContext = createContext<AppContextType | undefined>(undefined);
@@ -40,11 +40,12 @@ const AppProvider = ({ children }: { children: ReactNode }) => {
                 lerp: 0.075,
                 multiplier: 1,
                 direction: "vertical",
-                smartphone: { smooth: false }, 
+                smartphone: { smooth: false },
                 tablet: { smooth: false, breakpoint: 1024 },
             });
 
             setScroll(scrollInstance);
+
             scrollInstance.update();
         };
 

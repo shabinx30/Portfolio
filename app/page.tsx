@@ -1,12 +1,16 @@
+// "use client"
 // import FlowingMenu from "./components/FlowingMenu/FlowingMenu";
 import Hero from "../components/Hero";
-import Project from "@/components/Project";
+import Skill from "@/components/Skills";
+import Project from "@/components/Projects";
+import Footer from "@/components/Footer";
+// import { useEffect } from "react";
 
-export async function generateStaticParams() {
-    return [];
-}
+// export async function generateStaticParams() {
+//     return [];
+// }
 
-export default async function Home() {
+export default function Home() {
     // const demoItems = [
     //     { link: '#', text: 'Web Development', image: 'https://picsum.photos/600/400?random=1' },
     //     { link: '#', text: 'UI/UX', image: 'https://picsum.photos/600/400?random=2' },
@@ -14,10 +18,24 @@ export default async function Home() {
     //     // { link: '#', text: 'Sequoia', image: 'https://picsum.photos/600/400?random=4' }
     // ];
 
+    // useEffect(() => {
+    //     const handleScroll = (e: any) => {
+    //         console.log(e)
+    //     }
+
+    //     window.addEventListener("scroll", handleScroll)
+    //     return () => {
+    //         window.removeEventListener("scroll", handleScroll)
+    //     }
+    // })
+
+
     return (
         <>
             <Hero />
+            <Skill />
             <Project />
+            <Footer />
         </>
     );
 }

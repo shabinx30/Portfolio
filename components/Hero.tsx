@@ -46,27 +46,27 @@ const Hero = () => {
                         I&apos;m Shabeen Sharih
                     </h1>
                     <p className="text-[#7b7b7b] dark:text-[#AEAEAE] text-[0.65em] font-semibold lg:text-[0.825em] mt-8">
-                        A highly passionate {" "}
-                        <span className="dark:text-[#C2FF78] text-black font-bold">Full Stack web developer</span>,
-                        specialized in MERN with expertise in MongoDB, Express, React and Node.js
+                        A Passionate {" "}
+                        <span className="dark:text-[#C2FF78] text-black font-bold">Full Stack Web Developer</span>,
+                        specializing in the MERN stack, with expertise in MongoDB, Express.js, React, and Node.js.
                     </p>
-                    <div className="flex gap-6 justify-center mt-6 dark:text-white/50">
-                        <Link href="https://www.linkedin.com/in/shabeen-sharih/" target="_blank"><FaLinkedin size={20} className="hover:text-white duration-150"/></Link>
-                        <Link href="https://github.com/shabinx30" target="_blank"><FaGithub size={20} className="hover:text-white duration-150" /></Link>
-                        <Link href="mailto:shabeensharih@gmail.com" target="_blank"><SiGmail size={20} className="hover:text-white duration-150" /></Link>
+                    <div className="flex gap-7 justify-center mt-6 text-black/60 dark:text-white/50 hover:text-black dark:hover:text-white duration-200">
+                        <Link href="https://www.linkedin.com/in/shabeen-sharih/" target="_blank"><FaLinkedin size={20}/></Link>
+                        <Link href="https://github.com/shabinx30" target="_blank"><FaGithub size={20} /></Link>
+                        <Link href="mailto:shabeensharih@gmail.com" target="_blank"><SiGmail size={20} /></Link>
                     </div>
                 </div>
             </div>
 
             <motion.div
                 ref={projectsRef}
-                className="absolute bottom-[-3em] z-50"
+                className="absolute flex w-full justify-center bottom-[-3em] z-50"
                 initial="hidden"
                 animate={isProjectsInView ? "visible" : "hidden"}
                 variants={projectsVariants}
             >
                 <h1 className="text-2xl HN-medium lg:text-[1.6em] px-[2em] md:px-[3em]">
-                    Recent Projects
+                    Skills
                 </h1>
             </motion.div>
 
