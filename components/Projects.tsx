@@ -9,9 +9,9 @@ import { motion } from "framer-motion";
 import { useAnimation, useInView } from "framer-motion";
 
 const Project = () => {
-    const { projectRef } = useAppContext();
+    const { projectsRef } = useAppContext();
 
-    const inView = useInView(projectRef, { amount: 0.25 });
+    const inView = useInView(projectsRef, { amount: 0.25 });
     const controls = useAnimation();
 
     useEffect(() => {
@@ -38,7 +38,7 @@ const Project = () => {
             {/* projects */}
             <motion.div
                 className="absolute px-[2em] md:px-[4em]"
-                ref={projectRef}
+                ref={projectsRef}
                 initial="hidden"
                 animate={controls}
                 variants={{

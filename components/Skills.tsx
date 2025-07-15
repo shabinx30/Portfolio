@@ -1,8 +1,14 @@
+"use client"
+
+import { useAppContext } from "@/context/AppContext";
 import Image from "next/image";
 
 const Skill = () => {
+
+    const {skillsRef} = useAppContext()
+
     return (
-        <div className="mt-[8em] flex flex-col items-center gap-2 w-full">
+        <div ref={skillsRef} className="mt-[7em] flex flex-col items-center gap-2 w-full">
             <h2 className="font-semibold">FrontEnd</h2>
             <Image
                 width={100}

@@ -28,6 +28,10 @@
   font-family: 'Helvetica Medium';
   src: url('./assets/fonts/TAN\ KULTURE-DISPLAY.otf');
 }
+@font-face {
+  font-family: 'Helvetica Semi Bold';
+  src: url('./assets/fonts/HelveticaNeueMedium.otf');
+}
 
 @font-face {
   font-family: 'Helvetica Bold';
@@ -67,6 +71,10 @@ body {
 
 .HN-medium {
   font-family: "Helvetica Medium";
+}
+
+.HN-semi-bold {
+  font-family: "Helvetica Semi Bold";
 }
 
 .HN-bold {

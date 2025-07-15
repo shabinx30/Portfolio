@@ -1,12 +1,5 @@
 import type { Metadata } from "next";
-import { Krona_One } from "next/font/google";
 import "./globals.css";
-
-const majorMonoDisplay = Krona_One({
-    weight: "400",
-    variable: "--major-mono-display",
-    subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
     title: "Shabeen Sharih | Full Stack Developer & Web Designer",
@@ -62,7 +55,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${majorMonoDisplay.variable} antialiased`}>
+            <body className={`antialiased`}>
                 <AppProvider>{children}</AppProvider>
             </body>
         </html>

@@ -65,7 +65,7 @@ const Hero = () => {
                 animate={isProjectsInView ? "visible" : "hidden"}
                 variants={projectsVariants}
             >
-                <h1 className="text-2xl HN-medium lg:text-[1.6em] px-[2em] md:px-[3em]">
+                <h1 className="text-2xl HN-medium lg:text-[1.6em]">
                     Skills
                 </h1>
             </motion.div>
