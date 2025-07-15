@@ -46,16 +46,14 @@ const Hero = () => {
                         I&apos;m Shabeen Sharih
                     </h1>
                     <p className="text-[#7b7b7b] dark:text-[#AEAEAE] text-[0.65em] font-semibold lg:text-[0.825em] mt-8">
-                        A highly passionate{" "}
-                        <span className="dark:text-[#C2FF78] text-black font-bold">web developer</span>,
-                        constantly challenging my problem-solving skills and
-                        striving for consistency. Every day, I work diligently
-                        to enhance my abilities and grow in my craft.
+                        A highly passionate {" "}
+                        <span className="dark:text-[#C2FF78] text-black font-bold">Full Stack web developer</span>,
+                        specialized in MERN with expertise in MongoDB, Express, React and Node.js
                     </p>
                     <div className="flex gap-6 justify-center mt-6 dark:text-white/50">
-                        <Link href="https://www.linkedin.com/in/shabeen-sharih/"><FaLinkedin size={20} className="hover:text-white duration-150"/></Link>
-                        <Link href="https://github.com/shabinx30"><FaGithub size={20} className="hover:text-white duration-150" /></Link>
-                        <Link href="mailto:shabeensharih@gmail.com"><SiGmail size={20} className="hover:text-white duration-150" /></Link>
+                        <Link href="https://www.linkedin.com/in/shabeen-sharih/" target="_blank"><FaLinkedin size={20} className="hover:text-white duration-150"/></Link>
+                        <Link href="https://github.com/shabinx30" target="_blank"><FaGithub size={20} className="hover:text-white duration-150" /></Link>
+                        <Link href="mailto:shabeensharih@gmail.com" target="_blank"><SiGmail size={20} className="hover:text-white duration-150" /></Link>
                     </div>
                 </div>
             </div>
@@ -73,25 +71,25 @@ const Hero = () => {
             </motion.div>
 
             {/* Animated Circles */}
-            <motion.div
+            <div
                 className="absolute bottom-[22%] right-[10%] lg:right-[0%] rotate-[20deg] bg-[#8CFF00] w-[10%] h-[25%] lg:h-[50%] rounded-full"
-                {...floatYAnimation}
+                // {...floatYAnimation}
             />
             <div className="absolute bottom-[-2%] right-[3em] rotate-[75deg] bg-[#8CFF00] w-[20%] lg:w-[14em] h-[22%] lg:h-[50%] rounded-full" />
-            <motion.div
+            <div
                 className="absolute bottom-0 right-[26%] rotate-[-25deg] bg-[#8CFF00] w-[18%] h-[40%] rounded-full"
-                {...floatAnimation(0.2)}
+                // {...floatAnimation(0.2)}
             />
             <div className="absolute bottom-0 right-[20%] bg-[#8CFF00] w-[8em] h-[30%] rounded-full" />
-            <motion.div
+            <div
                 className="absolute bottom-8 left-0 rotate-[65deg] bg-[#8CFF00] w-[20%] h-[30%] rounded-full"
-                {...floatAnimation(0.6)}
+                // {...floatAnimation(0.6)}
             />
             <div className="absolute bottom-8 left-0 rotate-[-30deg] bg-[#8CFF00] w-[20%] h-[20%] rounded-full" />
             <div className="absolute bottom-4 left-[16%] rotate-[10deg] bg-[#8CFF00] w-[20%] h-[10%] rounded-full" />
-            <motion.div
+            <div
                 className="absolute bottom-2 left-[40%] bg-[#8CFF00] w-[20%] h-[15%] rounded-full"
-                {...floatAnimation(0.4)}
+                // {...floatAnimation(0.4)}
             />
         </section>
     );

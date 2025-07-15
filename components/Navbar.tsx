@@ -31,9 +31,10 @@ const Navbar = () => {
                 delay: 0.5,
             }}
         >
-            <ul className="w-[80%] md:w-[60%] lg:w-[40%] bg-[#B0FF62] dark:bg-[#272727] shadow-2xl flex justify-between px-[3.4vw] items-center rounded-full py-4">
-                <li className="cursor-pointer" onClick={handleScroll}>PROJECT</li>
+            <ul className="w-[80%] md:w-[60%] lg:w-[46%] bg-[#B0FF62] dark:bg-[#272727] dark:text-[#e2ffc5] shadow-2xl flex justify-around items-center rounded-3xl py-4">
+                <li className="cursor-pointer">HOME</li>
                 <li className="cursor-pointer">SKILLS</li>
+                <li className="cursor-pointer" onClick={handleScroll}>PROJECT</li>
                 <li className="cursor-pointer">CONTACT</li>
             </ul>
         </motion.nav>
