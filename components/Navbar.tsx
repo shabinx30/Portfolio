@@ -24,7 +24,7 @@ const Navbar = () => {
         scroll?.on("scroll", (args) => {
             const currScroll = args.scroll.y;
 
-            if (currScroll > prevScoll.current && currScroll > 200) {
+            if (currScroll > prevScoll.current && currScroll > 300) {
                 setShowNav(false);
             } else if (currScroll < prevScoll.current) {
                 setShowNav(true);
