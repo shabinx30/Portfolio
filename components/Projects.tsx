@@ -55,6 +55,7 @@ const Project = () => {
                 "razopay",
                 "ejs",
                 "mvc",
+                "bootstrap",
                 "node mailer",
                 "aws",
                 "google auth"
@@ -111,8 +112,8 @@ const Project = () => {
             techs: [
                 "react.js",
                 "tailewind",
-                "typescript",
-                "firebase"
+                "firebase",
+                "api"
             ],
         },
         {
@@ -125,14 +126,14 @@ const Project = () => {
             techs: [
                 "react.js",
                 "tailewind",
-                "typescript",
-                "firebase"
+                "firebase",
+                "api"
             ],
         },
     ];
 
     return (
-        <div className="flex flex-col items-center mt-[8em]">
+        <div ref={projectsRef} className="flex flex-col items-center mt-[8em]">
             <h1 className="text-2xl HN-medium lg:text-[1.6em]">
                 Recent Projects
             </h1>
