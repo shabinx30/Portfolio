@@ -8,7 +8,6 @@ import Link from "next/link";
 
 const Hero = () => {
     const sectionRef = useRef(null);
-    const isInView = useInView(sectionRef, { margin: "-20% 0px", once: false });
     const projectsRef = useRef(null);
     const isProjectsInView = useInView(projectsRef, {
         amount: 0.5,
@@ -19,17 +18,6 @@ const Hero = () => {
     const projectsVariants = {
         hidden: { opacity: 0, y: 50 },
         visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-    };
-
-    // Common animation settings for floating circles
-    const floatAnimation = (delay = 0) => ({
-        animate: isInView ? { x: ["10%", "-10%", "10%"] } : { x: 0 },
-        transition: { duration: 5, repeat: Infinity, ease: "easeIn", delay },
-    });
-
-    const floatYAnimation = {
-        animate: isInView ? { y: ["10%", "-10%", "10%"] } : { y: 0 },
-        transition: { duration: 5, repeat: Infinity, ease: "easeIn" },
     };
 
     return (
