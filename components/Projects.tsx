@@ -55,6 +55,9 @@ const Project = () => {
                 "razopay",
                 "ejs",
                 "mvc",
+                "node mailer",
+                "aws",
+                "google auth"
             ],
         },
         {
@@ -76,6 +79,7 @@ const Project = () => {
                 "jwt",
                 "redux",
                 "pwa",
+                "cloudinary"
             ],
         },
         {
@@ -108,11 +112,7 @@ const Project = () => {
                 "react.js",
                 "tailewind",
                 "typescript",
-                "postgres",
-                "node.js",
-                "express.js",
-                "jwt",
-                "redux",
+                "firebase"
             ],
         },
         {
@@ -126,11 +126,7 @@ const Project = () => {
                 "react.js",
                 "tailewind",
                 "typescript",
-                "postgres",
-                "node.js",
-                "express.js",
-                "jwt",
-                "redux",
+                "firebase"
             ],
         },
     ];
