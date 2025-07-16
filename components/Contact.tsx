@@ -44,20 +44,20 @@ const Contacts = () => {
                     id="naam"
                     type="text"
                     onChange={handleChange}
-                    className="bg-[#3b3b3b] rounded-lg outline-none p-1 h-[2em]"
+                    className="bg-[#3b3b3b] text-white rounded-lg outline-none p-1 h-[2em]"
                 />
                 <label htmlFor="email">Email</label>
                 <input
                     id="email"
                     type="email"
                     onChange={handleChange}
-                    className="bg-[#3b3b3b] rounded-lg outline-none p-1 h-[2em]"
+                    className="bg-[#3b3b3b] text-white rounded-lg outline-none p-1 h-[2em]"
                 />
                 <label htmlFor="message">Message</label>
                 <textarea
                     id="message"
                     onChange={handleChange}
-                    className="bg-[#3b3b3b] rounded-lg outline-none p-1 min-h-[6em]"
+                    className="bg-[#3b3b3b] text-white rounded-lg outline-none p-1 min-h-[6em]"
                 ></textarea>
                 <button
                     type="submit"
