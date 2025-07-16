@@ -34,7 +34,7 @@ const Skill = () => {
             className="mt-[7em] flex flex-col items-center gap-2 w-full"
         >
             <h2 className="font-semibold">Frontend</h2>
-            <div className="flex gap-4 flex-wrap">
+            <div className="flex gap-4 flex-wrap justify-center">
                 {skills.frontend.map((skill, index) => (
                     <SkillItem key={index} skill={skill} />
                 ))}
@@ -50,19 +50,19 @@ const Skill = () => {
                 </div>
             </div>
             <h2 className="font-semibold mt-6">Backend & Databases</h2>
-            <div className="flex gap-4 flex-wrap">
+            <div className="flex gap-4 flex-wrap justify-center">
                 {skills.backend.map((skill, index) => (
                     <SkillItem key={index} skill={skill} />
                 ))}
             </div>
             <h2 className="font-semibold mt-6">Tools & Languages</h2>
-            <div className="flex gap-4 flex-wrap">
+            <div className="flex gap-4 flex-wrap justify-center">
                 {skills.toolsLaguages.map((skill, index) => (
                     <SkillItem key={index} skill={skill} />
                 ))}
             </div>
             <h2 className="font-semibold mt-6">Cloud & Deployment</h2>
-            <div className="flex gap-4 flex-wrap">
+            <div className="flex gap-4 flex-wrap justify-center">
                 {skills.cloudDeployment.map((skill, index) => (
                     <SkillItem key={index} skill={skill} />
                 ))}
