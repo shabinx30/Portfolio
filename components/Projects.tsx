@@ -133,7 +133,7 @@ const Project = () => {
     ];
 
     return (
-        <div ref={projectsRef} className="flex flex-col items-center mt-[8em]">
+        <section ref={projectsRef} className="flex flex-col items-center mt-[8em]">
             <h1 className="text-2xl HN-medium lg:text-[1.6em]">
                 Recent Projects
             </h1>
@@ -142,7 +142,7 @@ const Project = () => {
                     <ProjectItem key={index} project={project} />
                 ))}
             </div>
-        </div>
+        </section>
     );
 };
 

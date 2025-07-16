@@ -29,7 +29,7 @@ const Skill = () => {
     const { skillsRef } = useAppContext();
 
     return (
-        <div
+        <section
             ref={skillsRef}
             className="mt-[7em] flex flex-col items-center gap-2 w-full"
         >
@@ -77,7 +77,7 @@ const Skill = () => {
                     {"render"}
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 
