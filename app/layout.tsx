@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     authors: [
         {
             name: "Shabeen Sharih",
-            url: "https://tungstenz.online/", // Replace with your portfolio link
+            url: "https://shabeensharih.tungstenz.online/", // Replace with your portfolio link
         },
     ],
     robots: "index, follow", // Ensures search engines index your site
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
         title: "Shabeen Sharih | Full Stack Developer & Web Designer",
         description:
             "Explore my portfolio showcasing web development projects built with React.js, Next.js, and Node.js.",
-        url: "https://tungstenz.online/", // Replace with your actual URL
+        url: "https://shabeensharih.tungstenz.online/", // Replace with your actual URL
         type: "website",
         images: [
             {

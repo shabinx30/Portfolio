@@ -85,7 +85,7 @@ const Project = () => {
             git: "https://github.com/shabinx30/CHAT_APP",
             live: "https://chat.tungstenz.online",
             description:
-                "Designed a feature-rich chat app with online/offline status, typing indicators, and file sharing. Built with a focus on real time performance and seamless user experience.",
+                "Engineeredasecureusermanagement system with authentication, user registration, profile management, and admin controls. Implemented protected routes and role-based access control to manage user creation, editing, and deletion efficiently.",
             techs: [
                 "react.js",
                 "tailewind",
@@ -94,16 +94,16 @@ const Project = () => {
                 "node.js",
                 "express.js",
                 "jwt",
-                "redux"
+                "redux",
             ],
         },
         {
             name: "Netflix",
             image: "/Images/netflix_clone.png",
-            git: "https://github.com/shabinx30/CHAT_APP",
-            live: "https://chat.tungstenz.online",
+            git: "https://github.com/shabinx30/Netflix_Clone",
+            live: "https://netflix.tungstenz.online",
             description:
-                "Designed a feature-rich chat app with online/offline status, typing indicators, and file sharing. Built with a focus on real time performance and seamless user experience.",
+                "Crafted a dynamic video streaming platform with user authentication, movie browsing, trailer viewing, and a personalized favorites section. Focused on delivering a responsive and visually appealing user interface for enhanced user engagement.",
             techs: [
                 "react.js",
                 "tailewind",
@@ -112,16 +112,16 @@ const Project = () => {
                 "node.js",
                 "express.js",
                 "jwt",
-                "redux"
+                "redux",
             ],
         },
         {
             name: "OLX",
             image: "/Images/olx_clone.png",
-            git: "https://github.com/shabinx30/CHAT_APP",
-            live: "https://chat.tungstenz.online",
+            git: "https://github.com/shabinx30/OLX-Clone",
+            live: "https://olx.tungstenz.online",
             description:
-                "Designed a feature-rich chat app with online/offline status, typing indicators, and file sharing. Built with a focus on real time performance and seamless user experience.",
+                "Created a responsive online marketplace with user login/signup and product listing capabilities. Prioritized user experience by delivering a sleek, easy-to-navigate interface.",
             techs: [
                 "react.js",
                 "tailewind",
@@ -130,7 +130,7 @@ const Project = () => {
                 "node.js",
                 "express.js",
                 "jwt",
-                "redux"
+                "redux",
             ],
         },
     ];
