@@ -24,7 +24,7 @@ const Project = () => {
             name: "Flexwork",
             imageDark: "/Images/second_project(dark).png",
             imageLight: "/Images/second_project(light).png",
-            git: "https://github.com/shabinx30/CHAT_APP",
+            git: "https://github.com/shabinx30/FLEX_WORK",
             live: "https://chat.tungstenz.online",
             description:
                 "Developed a scalable freelancing platform connecting clients and freelancers through project listings, bidding, secure messaging, and escrow payments. Focused on smooth user experience, real-time interactions, and trust-driven workflows with modern tech stack.",
@@ -82,8 +82,8 @@ const Project = () => {
             name: "User Managment System",
             imageDark: "/Images/ums(dark).png",
             imageLight: "/Images/ums(light).png",
-            git: "https://github.com/shabinx30/CHAT_APP",
-            live: "https://chat.tungstenz.online",
+            git: "https://github.com/shabinx30/UMS-REACT-NODE",
+            live: "https://ums.tungstenz.online",
             description:
                 "Engineeredasecureusermanagement system with authentication, user registration, profile management, and admin controls. Implemented protected routes and role-based access control to manage user creation, editing, and deletion efficiently.",
             techs: [
