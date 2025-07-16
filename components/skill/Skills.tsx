@@ -1,7 +1,7 @@
 "use client";
 
 import { useAppContext } from "@/context/AppContext";
-import SkillItem from "./skill/SkillItem";
+import SkillItem from "./SkillItem";
 import Image from "next/image";
 
 const Skill = () => {

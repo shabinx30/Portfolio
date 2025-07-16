@@ -6,9 +6,9 @@ import { SiGmail } from "react-icons/si";
 const Footer = () => {
     return (
         <div className="bg-[#2b2b2b] text-sm py-[1em] flex justify-around">
-            <p className="text-gray-400">shabeensharih@gmail.com</p>
+            <p className="text-gray-400 hidden md:block">shabeensharih@gmail.com</p>
             <p className="text-gray-400">
-                All &copy;copyright reserved by{" "}
+                All rights reserved &copy; 2025{" "}
                 <Link className="text-[#C2FF78]" href="https://shabeensharih.online">
                     shabeensharih.online
                 </Link>

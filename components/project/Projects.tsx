@@ -3,7 +3,7 @@
 import React, { useEffect } from "react";
 import { useAppContext } from "@/context/AppContext";
 import { useAnimation, useInView } from "framer-motion";
-import ProjectItem from "./project/ProjectItem";
+import ProjectItem from "./ProjectItem";
 
 const Project = () => {
     const { projectsRef } = useAppContext();
