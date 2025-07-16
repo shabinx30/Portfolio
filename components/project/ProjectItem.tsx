@@ -38,8 +38,8 @@ const ProjectItem = ({ project }: { project: ProjectType }) => {
 
     return (
         <div className="group bg-[#1b1b1b] dark:bg-[#2b2b2b] p-1 rounded-2xl">
-            <Link href={project.live} target="_blank">
-                <div className="relative h-[14em] overflow-hidden rounded-2xl">
+            <div className="relative h-[14em] overflow-hidden rounded-2xl">
+                <Link href={project.live} target="_blank">
                     <Image
                         className="w-full object-cover object-center transition-transform duration-500 ease-in-out group-hover:scale-[1.1]"
                         width={100}
@@ -47,16 +47,18 @@ const ProjectItem = ({ project }: { project: ProjectType }) => {
                         src={image || ""}
                         alt="project"
                     />
-                    <Link href={project.git} target="_blank">
-                        <span className="absolute left-1 bottom-1 rounded-full shadow-[0_1px_10px] shadow-black/50 bg-black dark:bg-[#2b2b2b] text-white p-3 duration-200">
-                            <FaGithub />
-                        </span>
-                    </Link>
+                </Link>
+                <Link href={project.git} target="_blank">
+                    <span className="absolute left-1 bottom-1 rounded-full shadow-[0_1px_10px] shadow-black/50 bg-black dark:bg-[#2b2b2b] text-white p-3 duration-200">
+                        <FaGithub />
+                    </span>
+                </Link>
+                <Link href={project.live} target="_blank">
                     <span className="absolute right-1 bottom-1 rounded-full shadow-[0_1px_10px] shadow-black/50 bg-black dark:bg-[#2b2b2b] text-white p-3 rotate-0 group-hover:rotate-[-45deg] duration-200">
                         <FaArrowRightLong />
                     </span>
-                </div>
-            </Link>
+                </Link>
+            </div>
             <div className="px-3">
                 <h2 className="HN-semi-bold py-2 text-white ">
                     {project.name}
