@@ -31,7 +31,7 @@ const Hero = () => {
                     <h1 className="text-2xl lg:text-4xl HN-medium mb-2 dark:text-transparent bg-clip-text text-black dark:bg-gradient-to-b from-[#C2FF78] to-[#C2FF78]/30">
                         Hello,
                     </h1>
-                    <h1 className="text-3xl lg:text-[4.12em] dark:text-transparent HN-medium font-extralight bg-clip-text text-black dark:bg-gradient-to-r to-white/30 via-white from-white/30">
+                    <h1 className="text-3xl lg:text-[4em] dark:text-transparent HN-medium font-extralight bg-clip-text text-black dark:bg-gradient-to-r to-white/30 via-white from-white/30">
                         I&apos;m Shabeen Sharih
                     </h1>
                     <p className="text-[#7b7b7b] dark:text-[#AEAEAE] text-[0.65em] font-semibold lg:text-[0.825em] mt-8">
