@@ -5,24 +5,25 @@ import { motion, useInView } from "framer-motion";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 import Link from "next/link";
+import { useAppContext } from "@/context/AppContext";
 
 const Hero = () => {
-    const sectionRef = useRef(null);
-    const projectsRef = useRef(null);
-    const isProjectsInView = useInView(projectsRef, {
+    const { homeRef } = useAppContext();
+    const skillsRef = useRef(null);
+    const isSkillsInView = useInView(skillsRef, {
         amount: 0.5,
         once: true,
     });
 
     // Animation variants for the "Recent Projects" text
-    const projectsVariants = {
+    const skillsVariants = {
         hidden: { opacity: 0, y: 50 },
         visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
     };
 
     return (
         <section
-            ref={sectionRef}
+            ref={homeRef}
             className="relative h-[100dvh] w-[100vw] bg-white dark:bg-black"
         >
             <div className="absolute flex justify-center pt-[14%] dark:bg-black/30 z-40 backdrop-blur-[50px] h-[114dvh] w-[100vw]">
@@ -34,28 +35,44 @@ const Hero = () => {
                         I&apos;m Shabeen Sharih
                     </h1>
                     <p className="text-[#7b7b7b] dark:text-[#AEAEAE] text-[0.65em] font-semibold lg:text-[0.825em] mt-8">
-                        A Passionate {" "}
-                        <span className="dark:text-[#C2FF78] text-black font-bold">Full Stack Web Developer</span>,
-                        specializing in the MERN stack, with expertise in MongoDB, Express.js, React, and Node.js.
+                        A Passionate{" "}
+                        <span className="dark:text-[#C2FF78] text-black font-bold">
+                            Full Stack Web Developer
+                        </span>
+                        , specializing in the MERN stack, with expertise in
+                        MongoDB, Express.js, React, and Node.js.
                     </p>
                     <div className="flex gap-7 justify-center mt-6 text-black/60 dark:text-white/50 hover:text-black dark:hover:text-white duration-200">
-                        <Link href="https://www.linkedin.com/in/shabeen-sharih/" target="_blank"><FaLinkedin size={20}/></Link>
-                        <Link href="https://github.com/shabinx30" target="_blank"><FaGithub size={20} /></Link>
-                        <Link href="mailto:shabeensharih@gmail.com" target="_blank"><SiGmail size={20} /></Link>
+                        <Link
+                            href="https://www.linkedin.com/in/shabeen-sharih/"
+                            target="_blank"
+                        >
+                            <FaLinkedin size={20} />
+                        </Link>
+                        <Link
+                            href="https://github.com/shabinx30"
+                            target="_blank"
+                        >
+                            <FaGithub size={20} />
+                        </Link>
+                        <Link
+                            href="mailto:shabeensharih@gmail.com"
+                            target="_blank"
+                        >
+                            <SiGmail size={20} />
+                        </Link>
                     </div>
                 </div>
             </div>
 
             <motion.div
-                ref={projectsRef}
+                ref={skillsRef}
                 className="absolute flex w-full justify-center bottom-[-3em] z-50"
                 initial="hidden"
-                animate={isProjectsInView ? "visible" : "hidden"}
-                variants={projectsVariants}
+                animate={isSkillsInView ? "visible" : "hidden"}
+                variants={skillsVariants}
             >
-                <h1 className="text-2xl HN-medium lg:text-[1.6em]">
-                    Skills
-                </h1>
+                <h1 className="text-2xl HN-medium lg:text-[1.6em]">Skills</h1>
             </motion.div>
 
             {/* Animated Circles */}

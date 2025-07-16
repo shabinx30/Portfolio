@@ -1,8 +1,10 @@
 "use client";
 
+import { useAppContext } from "@/context/AppContext";
 import React, { useState } from "react";
 
 const Contacts = () => {
+    const {contactRef} = useAppContext()
     const [formData, setFormData] = useState({
         naam: "",
         email: "",
@@ -26,12 +28,12 @@ const Contacts = () => {
             body: JSON.stringify(formData),
         });
 
-        const data = await response.json()
-        alert(data.message)
+        const data = await response.json();
+        alert(data.message);
     };
 
     return (
-        <section className="flex flex-col items-center">
+        <section ref={contactRef} className="flex flex-col items-center">
             <h1 className="text-2xl HN-medium">Get in touch</h1>
             <form
                 onSubmit={handleSubmit}

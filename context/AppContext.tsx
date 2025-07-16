@@ -13,16 +13,20 @@ import type LocomotiveScroll from "locomotive-scroll";
 import Navbar from "@/components/Navbar";
 
 interface AppContextType {
+    homeRef: RefObject<HTMLDivElement | null>
     skillsRef: RefObject<HTMLDivElement | null>;
     projectsRef: RefObject<HTMLDivElement | null>;
+    contactRef: RefObject<HTMLDivElement | null>;
     scroll: LocomotiveScroll | null;
 }
 
 const AppContext = createContext<AppContextType | undefined>(undefined);
 
 const AppProvider = ({ children }: { children: ReactNode }) => {
+    const homeRef = useRef<HTMLDivElement>(null);
     const skillsRef = useRef<HTMLDivElement>(null);
     const projectsRef = useRef<HTMLDivElement>(null);
+    const contactRef = useRef<HTMLDivElement>(null);
     const [scroll, setScroll] = useState<LocomotiveScroll | null>(null);
     const scrollContainerRef = useRef<HTMLDivElement>(null);
 
@@ -64,7 +68,7 @@ const AppProvider = ({ children }: { children: ReactNode }) => {
     }, []);
 
     return (
-        <AppContext.Provider value={{ skillsRef, projectsRef, scroll }}>
+        <AppContext.Provider value={{ homeRef, skillsRef, projectsRef, contactRef, scroll }}>
             <Navbar />
             <div ref={scrollContainerRef} data-scroll-container>
                 {children}
