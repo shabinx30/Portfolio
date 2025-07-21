@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+    metadataBase: new URL("https://shabeensharih.tungstenz.online"),
     title: "Shabeen Sharih | Full Stack Developer & Web Designer",
     description:
         "I'm Shabeen Sharih, a passionate Full Stack Developer specializing in React.js, Next.js, and Node.js. I build responsive, high-performance websites and web applications that enhance user experience.",
@@ -25,15 +26,15 @@ export const metadata: Metadata = {
     authors: [
         {
             name: "Shabeen Sharih",
-            url: "https://shabeensharih.tungstenz.online/", // Replace with your portfolio link
+            url: "https://shabeensharih.tungstenz.online/",
         },
     ],
-    robots: "index, follow", // Ensures search engines index your site
+    robots: "index, follow",
     openGraph: {
         title: "Shabeen Sharih | Full Stack Developer & Web Designer",
         description:
             "Explore my portfolio showcasing web development projects built with React.js, Next.js, and Node.js.",
-        url: "https://shabeensharih.tungstenz.online/", // Replace with your actual URL
+        url: "https://shabeensharih.tungstenz.online/",
         type: "website",
         images: [
             {
