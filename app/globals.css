@@ -18,26 +18,11 @@
   }
 }
 
-
-@font-face {
-  font-family: 'Helvetica Light';
-  src: url('./assets/fonts/HelveticaNeueThin.otf');
-}
-
 @font-face {
   font-family: 'Helvetica Medium';
   src: url('./assets/fonts/TAN\ KULTURE-DISPLAY.otf');
+  font-display: swap;
 }
-@font-face {
-  font-family: 'Helvetica Semi Bold';
-  src: url('./assets/fonts/HelveticaNeueMedium.otf');
-}
-
-@font-face {
-  font-family: 'Helvetica Bold';
-  src: url('./assets/fonts/HelveticaNeueBold.otf');
-}
-
 
 html,
 body {
@@ -65,18 +50,6 @@ body {
   background: var(--background);
 }
 
-.HN-light {
-  font-family: "Helvetica Light";
-}
-
 .HN-medium {
   font-family: "Helvetica Medium";
-}
-
-.HN-semi-bold {
-  font-family: "Helvetica Semi Bold";
-}
-
-.HN-bold {
-  font-family: "Helvetica Bold";
 }
