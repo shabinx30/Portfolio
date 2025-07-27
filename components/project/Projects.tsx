@@ -21,21 +21,26 @@ const Project = () => {
 
     const projects = [
         {
-            name: "Flexwork",
+            name: "Untitled",
             imageDark: "/Images/second_project(dark).png",
             imageLight: "/Images/second_project(light).png",
             git: "https://github.com/shabinx30/FLEX_WORK",
             live: "https://chat.tungstenz.online",
             description:
-                "Developed a scalable freelancing platform connecting clients and freelancers through project listings, bidding, secure messaging, and escrow payments. Focused on smooth user experience, real-time interactions, and trust-driven workflows with modern tech stack.",
+                "Designed and developed a web platform that connects brands with content creators for paid promotions. Implemented features including user authentication, creator portfolios, search and filtering, booking system, in app messaging, payment processing, and an admin dashboard. Built using a scalable microservices architecture with secure API communication, real time interactions, and automated deployment pipelines.",
             techs: [
-                "react.js",
+                "next.js",
+                "microservices",
+                "kubernetes",
+                "docker",
+                "cicd",
                 "socket.io",
+                "webrtc",
                 "tailewind",
                 "typescript",
                 "mongodb",
                 "node.js",
-                "express.js",
+                "nest.js",
                 "jwt",
                 "redux",
                 "pwa",
