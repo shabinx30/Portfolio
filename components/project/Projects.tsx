@@ -24,8 +24,8 @@ const Project = () => {
             name: "Untitled",
             imageDark: "/Images/second_project(dark).png",
             imageLight: "/Images/second_project(light).png",
-            git: "https://github.com/shabinx30/FLEX_WORK",
-            live: "https://chat.tungstenz.online",
+            git: "https://github.com/shabinx30/Unknown",
+            live: "https://unknown.tungstenz.online",
             description:
                 "Designed and developed a web platform that connects brands with content creators for paid promotions. Implemented features including user authentication, creator portfolios, search and filtering, booking system, in app messaging, payment processing, and an admin dashboard. Built using a scalable microservices architecture with secure API communication, real time interactions, and automated deployment pipelines.",
             techs: [
