@@ -53,7 +53,7 @@ const Skill = () => {
                         fontWeight="bold"
                         fill="transparent"
                         stroke="url(#strokeGradient)"
-                        strokeWidth="0.65"
+                        strokeWidth="0.6"
                         paintOrder="stroke"
                     >
                         SKILLS
