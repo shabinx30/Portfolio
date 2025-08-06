@@ -25,13 +25,16 @@ const Project = () => {
             ref={projectsRef}
             className="flex flex-col items-center mt-[8em]"
         >
-            <svg viewBox="0 0 600 25" className="w-full h-auto">
+            <svg
+                viewBox="0 0 600 25"
+                className="w-full h-[40px] sm:h-[50px] md:h-[60px]"
+            >
                 <text
                     x="50%"
                     y="50%"
                     textAnchor="middle"
                     dominantBaseline="middle"
-                    fontSize="16"
+                    fontSize="20"
                     fontWeight="bold"
                     fill="transparent"
                     stroke="url(#strokeGradient)"

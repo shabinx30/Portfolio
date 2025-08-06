@@ -34,7 +34,10 @@ const Contacts = () => {
 
     return (
         <section ref={contactRef} className="flex flex-col items-center">
-            <svg viewBox="0 0 600 40" className="w-full h-auto">
+            <svg
+                viewBox="0 0 600 40"
+                className="w-full h-[40px] sm:h-[50px] md:h-[60px]"
+            >
                 <defs>
                     <linearGradient
                         id="strokeGradient"
@@ -54,11 +57,11 @@ const Contacts = () => {
                     y="50%"
                     textAnchor="middle"
                     dominantBaseline="middle"
-                    fontSize="16"
+                    fontSize="32"
                     fontWeight="bold"
                     fill="transparent"
                     stroke="url(#strokeGradient)"
-                    strokeWidth="0.6"
+                    strokeWidth="1"
                     paintOrder="stroke"
                 >
                     GET IN TOUCH

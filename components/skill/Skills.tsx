@@ -29,7 +29,11 @@ const Skill = () => {
                 animate={isSkillsInView ? "visible" : "hidden"}
                 variants={skillsVariants}
             >
-                <svg viewBox="0 0 600 40" className="w-full h-auto">
+                <svg
+                    viewBox="0 0 600 40"
+                    className="w-full h-[40px] sm:h-[50px] md:h-[60px]"
+                    preserveAspectRatio="xMidYMid meet"
+                >
                     <defs>
                         <linearGradient
                             id="strokeGradient"
@@ -49,11 +53,11 @@ const Skill = () => {
                         y="50%"
                         textAnchor="middle"
                         dominantBaseline="middle"
-                        fontSize="16"
+                        fontSize="32"
                         fontWeight="bold"
                         fill="transparent"
                         stroke="url(#strokeGradient)"
-                        strokeWidth="0.6"
+                        strokeWidth="0.75"
                         paintOrder="stroke"
                     >
                         SKILLS
