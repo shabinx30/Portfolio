@@ -53,3 +53,14 @@ body {
 .HN-medium {
   font-family: "Helvetica Medium";
 }
+
+.text-outline-1 {
+  color: transparent;
+  -webkit-text-stroke: 1px transparent; /* We'll set the stroke color using background */
+  background: linear-gradient(to right, #ff0080, #7928ca);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-color: #000; /* fallback if gradient doesn't apply */
+  -webkit-text-stroke: 1px;
+}

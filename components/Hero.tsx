@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 import Link from "next/link";
@@ -13,17 +13,7 @@ const Hero = () => {
     const greRef = useRef(null);
     const nameRef = useRef(null);
     const disRef = useRef(null);
-    const skillsRef = useRef(null);
-    const isSkillsInView = useInView(skillsRef, {
-        amount: 0.5,
-        once: true,
-    });
-
-    // Animation variants for the "Recent Projects" text
-    const skillsVariants = {
-        hidden: { opacity: 0, y: 50 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-    };
+    
 
     useEffect(() => {
         gsap.from(greRef.current, {
@@ -104,8 +94,8 @@ const Hero = () => {
                     </motion.div>
                     <motion.div
                         initial={{ opacity: 0 }}
-                        animate={{ opacity: 1}}
-                        transition={{delay: 0.25}}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.25 }}
                         className="flex gap-7 justify-center mt-6 text-black/60 dark:text-white/50 hover:text-black dark:hover:text-white duration-200"
                     >
                         <Link
@@ -129,16 +119,6 @@ const Hero = () => {
                     </motion.div>
                 </div>
             </div>
-
-            <motion.div
-                ref={skillsRef}
-                className="absolute flex w-full justify-center bottom-[-3em] z-50"
-                initial="hidden"
-                animate={isSkillsInView ? "visible" : "hidden"}
-                variants={skillsVariants}
-            >
-                <h1 className="text-2xl HN-medium lg:text-[1.6em]">Skills</h1>
-            </motion.div>
 
             {/* Animated Circles */}
             <div

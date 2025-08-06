@@ -4,7 +4,7 @@ import { useAppContext } from "@/context/AppContext";
 import React, { useState } from "react";
 
 const Contacts = () => {
-    const {contactRef} = useAppContext()
+    const { contactRef } = useAppContext();
     const [formData, setFormData] = useState({
         naam: "",
         email: "",
@@ -34,7 +34,36 @@ const Contacts = () => {
 
     return (
         <section ref={contactRef} className="flex flex-col items-center">
-            <h1 className="text-2xl HN-medium">Get in touch</h1>
+            <svg viewBox="0 0 600 40" className="w-full h-auto">
+                <defs>
+                    <linearGradient
+                        id="strokeGradient"
+                        x1="0%"
+                        y1="0%"
+                        x2="0%"
+                        y2="100%"
+                    >
+                        <stop offset="0%" stopColor="#C2FF78" />
+                        <stop offset="50%" stopColor="#C2FF78" />
+                        <stop offset="100%" stopColor="#0000" />
+                    </linearGradient>
+                </defs>
+
+                <text
+                    x="50%"
+                    y="50%"
+                    textAnchor="middle"
+                    dominantBaseline="middle"
+                    fontSize="16"
+                    fontWeight="bold"
+                    fill="transparent"
+                    stroke="url(#strokeGradient)"
+                    strokeWidth="0.65"
+                    paintOrder="stroke"
+                >
+                    GET IN TOUCH
+                </text>
+            </svg>
             <form
                 onSubmit={handleSubmit}
                 className="flex flex-col gap-1 my-[2em] w-[50vw] md:w-[30vw] outline-none"
