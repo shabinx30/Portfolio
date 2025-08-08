@@ -35,7 +35,7 @@ const SmoothScrollWrapper: React.FC<SmoothScrollWrapperProps> = ({
     children,
 }) => {
     const scrollRef = useRef<HTMLDivElement>(null);
-    const [_, setScroll] = useState<LocomotiveScrollInstance | null>(null);
+    const setScroll = useState<LocomotiveScrollInstance | null>(null)[1]
 
     useEffect(() => {
         if (!scrollRef.current) return;
