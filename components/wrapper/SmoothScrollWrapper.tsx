@@ -35,7 +35,7 @@ const SmoothScrollWrapper: React.FC<SmoothScrollWrapperProps> = ({
     children,
 }) => {
     const scrollRef = useRef<HTMLDivElement>(null);
-    const [scroll, setScroll] = useState<LocomotiveScrollInstance | null>(null);
+    const [_, setScroll] = useState<LocomotiveScrollInstance | null>(null);
 
     useEffect(() => {
         if (!scrollRef.current) return;
@@ -66,8 +66,7 @@ const SmoothScrollWrapper: React.FC<SmoothScrollWrapperProps> = ({
             } catch (error) {
                 console.error(
                     "Failed to initialize LocomotiveScroll:",
-                    error,
-                    scroll
+                    error
                 );
             }
         };

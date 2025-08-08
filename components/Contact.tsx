@@ -67,7 +67,7 @@ const Contacts = () => {
                     GET IN TOUCH
                 </text>
             </svg>
-            <p className="text-lg">Let's build something together</p>
+            <p className="text-lg">Let&apos;s build something together</p>
             <form
                 onSubmit={handleSubmit}
                 className="flex flex-col gap-1 my-[2em] w-[50vw] md:w-[30vw] outline-none"
