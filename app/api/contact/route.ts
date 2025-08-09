@@ -25,7 +25,7 @@ export async function POST(req: Request) {
             text: `Message from ${naam} (${email}):\n\n${message}`,
         });
 
-        return Response.json({ message: "Message sent successfully." });
+        return Response.json({ message: "success" });
     } catch (error) {
         console.log(error);
         return new Response(

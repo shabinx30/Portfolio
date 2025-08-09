@@ -8,16 +8,25 @@ import {
     useState,
     useEffect,
     RefObject,
+    SetStateAction,
+    Dispatch,
 } from "react";
 import type LocomotiveScroll from "locomotive-scroll";
 import Navbar from "@/components/Navbar";
 
 interface AppContextType {
-    homeRef: RefObject<HTMLDivElement | null>
+    homeRef: RefObject<HTMLDivElement | null>;
     skillsRef: RefObject<HTMLDivElement | null>;
     projectsRef: RefObject<HTMLDivElement | null>;
     contactRef: RefObject<HTMLDivElement | null>;
     scroll: LocomotiveScroll | null;
+    alert: { status: boolean; message: string };
+    setAlert: Dispatch<
+        SetStateAction<{
+            status: boolean;
+            message: string;
+        }>
+    >;
 }
 
 const AppContext = createContext<AppContextType | undefined>(undefined);
@@ -27,6 +36,10 @@ const AppProvider = ({ children }: { children: ReactNode }) => {
     const skillsRef = useRef<HTMLDivElement>(null);
     const projectsRef = useRef<HTMLDivElement>(null);
     const contactRef = useRef<HTMLDivElement>(null);
+    const [alert, setAlert] = useState({
+        status: false,
+        message: "",
+    });
     const [scroll, setScroll] = useState<LocomotiveScroll | null>(null);
     const scrollContainerRef = useRef<HTMLDivElement>(null);
 
@@ -68,7 +81,17 @@ const AppProvider = ({ children }: { children: ReactNode }) => {
     }, []);
 
     return (
-        <AppContext.Provider value={{ homeRef, skillsRef, projectsRef, contactRef, scroll }}>
+        <AppContext.Provider
+            value={{
+                homeRef,
+                skillsRef,
+                projectsRef,
+                contactRef,
+                scroll,
+                alert,
+                setAlert,
+            }}
+        >
             <Navbar />
             <div ref={scrollContainerRef} data-scroll-container>
                 {children}

@@ -4,7 +4,7 @@ import { useAppContext } from "@/context/AppContext";
 import React, { useState } from "react";
 
 const Contacts = () => {
-    const { contactRef } = useAppContext();
+    const { contactRef, setAlert } = useAppContext();
     const [formData, setFormData] = useState({
         naam: "",
         email: "",
@@ -29,7 +29,15 @@ const Contacts = () => {
         });
 
         const data = await response.json();
-        alert(data.message);
+        if (data.message === "success") {
+            setFormData({
+                naam: "",
+                email: "",
+                message: "",
+            });
+        }
+        setAlert({status: true, message: data.message})
+        console.log(data.message)
     };
 
     return (
@@ -76,6 +84,7 @@ const Contacts = () => {
                 <input
                     id="naam"
                     type="text"
+                    value={formData.naam}
                     onChange={handleChange}
                     className="bg-[#3b3b3b] text-white rounded-lg outline-none p-1 h-[2em]"
                 />
@@ -83,12 +92,14 @@ const Contacts = () => {
                 <input
                     id="email"
                     type="email"
+                    value={formData.email}
                     onChange={handleChange}
                     className="bg-[#3b3b3b] text-white rounded-lg outline-none p-1 h-[2em]"
                 />
                 <label htmlFor="message">Message</label>
                 <textarea
                     id="message"
+                    value={formData.message}
                     onChange={handleChange}
                     className="bg-[#3b3b3b] text-white rounded-lg outline-none p-1 min-h-[6em]"
                 ></textarea>
