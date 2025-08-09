@@ -5,7 +5,6 @@ import React, { RefObject, useEffect, useRef, useState } from "react";
 import { useAppContext } from "@/context/AppContext";
 
 const Navbar = () => {
-    const [showNav, setShowNav] = useState<boolean>(true);
     const prevScoll = useRef<number>(0);
     const {
         homeRef,
@@ -15,6 +14,8 @@ const Navbar = () => {
         scroll,
         alert,
         setAlert,
+        showNav,
+        setShowNav
     } = useAppContext();
 
     const handleScroll = (section: RefObject<HTMLDivElement | null>) => {
@@ -42,9 +43,9 @@ const Navbar = () => {
     }, [scroll]);
 
     useEffect(() => {
-        let interval: any;
+        let interval: number;
         if (alert) {
-            interval = setTimeout(() => {
+            interval = window.setTimeout(() => {
                 setAlert({ status: false, message: "" });
             }, 3000);
         }

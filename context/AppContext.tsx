@@ -27,6 +27,8 @@ interface AppContextType {
             message: string;
         }>
     >;
+    showNav: boolean;
+    setShowNav: Dispatch<SetStateAction<boolean>>;
 }
 
 const AppContext = createContext<AppContextType | undefined>(undefined);
@@ -40,6 +42,7 @@ const AppProvider = ({ children }: { children: ReactNode }) => {
         status: false,
         message: "",
     });
+    const [showNav, setShowNav] = useState<boolean>(true);
     const [scroll, setScroll] = useState<LocomotiveScroll | null>(null);
     const scrollContainerRef = useRef<HTMLDivElement>(null);
 
@@ -90,6 +93,8 @@ const AppProvider = ({ children }: { children: ReactNode }) => {
                 scroll,
                 alert,
                 setAlert,
+                showNav,
+                setShowNav
             }}
         >
             <Navbar />

@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import { LiaTelegramPlane } from "react-icons/lia";
 
 const Contacts = () => {
-    const { contactRef, setAlert } = useAppContext();
+    const { contactRef, setAlert, setShowNav } = useAppContext();
     const [formData, setFormData] = useState({
         naam: "",
         email: "",
@@ -23,6 +23,7 @@ const Contacts = () => {
         if (!formData.naam || !formData.email || !formData.message) {
             return;
         }
+        setShowNav(true)
         const response = await fetch("/api/contact", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
