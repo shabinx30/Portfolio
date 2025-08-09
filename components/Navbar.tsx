@@ -18,9 +18,9 @@ const Navbar = () => {
         setShowNav
     } = useAppContext();
 
-    const handleScroll = (section: RefObject<HTMLDivElement | null>) => {
+    const handleScroll = (section: RefObject<HTMLDivElement | SVGSVGElement | null>) => {
         if (scroll && section?.current) {
-            scroll.scrollTo(section?.current, {
+            scroll.scrollTo(section.current as unknown as HTMLElement, {
                 offset: -100,
                 duration: 350,
                 easing: [0.25, 0.0, 0.35, 1.0],
