@@ -1,5 +1,9 @@
 import nodemailer from "nodemailer";
 
+export async function GET() {
+  return Response.json({ message: "This endpoint accepts POST requests only." });
+}
+
 export async function POST(req: Request) {
     const body = await req.json();
     const { naam, email, message } = body;
