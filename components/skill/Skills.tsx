@@ -11,7 +11,6 @@ const Skill = () => {
 
     const isSkillsInView = useInView(skillsRef, {
         amount: 0.5,
-        once: true,
     });
 
     // Animation variants for the "Recent Projects" text

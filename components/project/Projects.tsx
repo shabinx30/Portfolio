@@ -1,31 +1,32 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React from "react";
 import { useAppContext } from "@/context/AppContext";
-import { useAnimation, useInView } from "framer-motion";
+import { useInView } from "framer-motion";
 import ProjectItem from "./ProjectItem";
 import { projects } from "@/libs/projects";
+import { motion } from "framer-motion";
 
 const Project = () => {
     const { projectsRef } = useAppContext();
 
-    const inView = useInView(projectsRef, { amount: 0.25 });
-    const controls = useAnimation();
+    const isProjectsInView = useInView(projectsRef, {
+        amount: 0.5,
+    });
 
-    useEffect(() => {
-        if (inView) {
-            controls.start("visible");
-        } else {
-            controls.start("hidden");
-        }
-    }, [inView, controls]);
+    // Animation variants for the "Recent Projects" text
+    const projectVariants = {
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+    };
 
     return (
-        <section
-            ref={projectsRef}
-            className="flex flex-col items-center mt-[8em]"
-        >
-            <svg
+        <section className="flex flex-col items-center mt-[8em]">
+            <motion.svg
+                ref={projectsRef}
+                initial="hidden"
+                animate={isProjectsInView ? "visible" : "hidden"}
+                variants={projectVariants}
                 viewBox="0 0 600 25"
                 className="w-full h-[40px] sm:h-[50px] md:h-[60px]"
             >
@@ -43,7 +44,7 @@ const Project = () => {
                 >
                     RECENT PROJECTS
                 </text>
-            </svg>
+            </motion.svg>
             <div className="px-[2em] grid justify-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-[2em]">
                 {projects.map((project, index) => (
                     <ProjectItem key={index} project={project} />

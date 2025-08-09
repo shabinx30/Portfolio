@@ -17,8 +17,8 @@ import Navbar from "@/components/Navbar";
 interface AppContextType {
     homeRef: RefObject<HTMLDivElement | null>;
     skillsRef: RefObject<HTMLDivElement | null>;
-    projectsRef: RefObject<HTMLDivElement | null>;
-    contactRef: RefObject<HTMLDivElement | null>;
+    projectsRef: RefObject<SVGSVGElement | null>;
+    contactRef: RefObject<SVGSVGElement | null>;
     scroll: LocomotiveScroll | null;
     alert: { status: boolean; message: string };
     setAlert: Dispatch<
@@ -36,8 +36,8 @@ const AppContext = createContext<AppContextType | undefined>(undefined);
 const AppProvider = ({ children }: { children: ReactNode }) => {
     const homeRef = useRef<HTMLDivElement>(null);
     const skillsRef = useRef<HTMLDivElement>(null);
-    const projectsRef = useRef<HTMLDivElement>(null);
-    const contactRef = useRef<HTMLDivElement>(null);
+    const projectsRef = useRef<SVGSVGElement>(null);
+    const contactRef = useRef<SVGSVGElement>(null);
     const [alert, setAlert] = useState({
         status: false,
         message: "",

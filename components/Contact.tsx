@@ -1,8 +1,10 @@
 "use client";
 
 import { useAppContext } from "@/context/AppContext";
+import { useInView } from "framer-motion";
 import React, { useState } from "react";
 import { LiaTelegramPlane } from "react-icons/lia";
+import {motion} from "framer-motion"
 
 const Contacts = () => {
     const { contactRef, setAlert, setShowNav } = useAppContext();
@@ -42,9 +44,24 @@ const Contacts = () => {
         console.log(data.message)
     };
 
+
+    const isContactInView = useInView(contactRef, {
+        amount: 0.5,
+    });
+
+    // Animation variants for the "Recent Projects" text
+    const contactVariants = {
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+    };
+
     return (
-        <section ref={contactRef} className="flex flex-col items-center mt-[6em]">
-            <svg
+        <section className="flex flex-col items-center mt-[6em]">
+            <motion.svg
+                ref={contactRef}
+                initial="hidden"
+                animate={isContactInView ? "visible" : "hidden"}
+                variants={contactVariants}
                 viewBox="0 0 600 40"
                 className="w-full h-[40px] sm:h-[50px] md:h-[60px]"
             >
@@ -76,7 +93,7 @@ const Contacts = () => {
                 >
                     GET IN TOUCH
                 </text>
-            </svg>
+            </motion.svg>
             <p className="text-lg">Let&apos;s build something together</p>
             <form
                 onSubmit={handleSubmit}
