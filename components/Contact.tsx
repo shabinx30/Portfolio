@@ -2,6 +2,7 @@
 
 import { useAppContext } from "@/context/AppContext";
 import React, { useState } from "react";
+import { LiaTelegramPlane } from "react-icons/lia";
 
 const Contacts = () => {
     const { contactRef, setAlert } = useAppContext();
@@ -105,8 +106,9 @@ const Contacts = () => {
                 ></textarea>
                 <button
                     type="submit"
-                    className="bg-black dark:bg-white text-white dark:text-black font-bold rounded-2xl py-2 my-4 cursor-pointer"
+                    className="flex gap-2 justify-center items-end bg-black dark:bg-white text-white dark:text-black font-semibold rounded-2xl pt-2 pb-2.5 my-4 cursor-pointer"
                 >
+                    <LiaTelegramPlane size={21} />
                     send
                 </button>
             </form>
