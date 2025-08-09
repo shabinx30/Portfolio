@@ -43,7 +43,7 @@ const Contacts = () => {
     };
 
     return (
-        <section ref={contactRef} className="flex flex-col items-center">
+        <section ref={contactRef} className="flex flex-col items-center mt-[6em]">
             <svg
                 viewBox="0 0 600 40"
                 className="w-full h-[40px] sm:h-[50px] md:h-[60px]"
