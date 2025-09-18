@@ -1,6 +1,6 @@
 export const projects = [
     {
-        name: "Untitled",
+        name: "Collabify",
         imageDark: "/Images/second_project(dark).png",
         imageLight: "/Images/second_project(light).png",
         git: "https://github.com/shabinx30/Unknown",

@@ -4,7 +4,7 @@ import { useAppContext } from "@/context/AppContext";
 import SkillItem from "./SkillItem";
 import Image from "next/image";
 import { motion, useInView } from "framer-motion";
-import { skills } from "@/libs/skills";
+import { skills } from "@/const/skills";
 
 const Skill = () => {
     const { skillsRef } = useAppContext();

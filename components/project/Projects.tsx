@@ -4,7 +4,7 @@ import React from "react";
 import { useAppContext } from "@/context/AppContext";
 import { useInView } from "framer-motion";
 import ProjectItem from "./ProjectItem";
-import { projects } from "@/libs/projects";
+import { projects } from "@/const/projects";
 import { motion } from "framer-motion";
 
 const Project = () => {
