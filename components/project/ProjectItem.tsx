@@ -38,7 +38,7 @@ const ProjectItem = ({ project }: { project: ProjectType }) => {
 
     return (
         <div className="group bg-[#1b1b1b] dark:bg-[#2b2b2b] p-1 rounded-2xl">
-            <div className="relative h-[14em] overflow-hidden rounded-2xl">
+            <div className="relative h-[14em] overflow-hidden rounded-xl">
                 <Link href={project.live} target="_blank">
                     <Image
                         className="w-full object-cover object-center transition-transform duration-500 ease-in-out group-hover:scale-[1.1]"
