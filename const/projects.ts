@@ -3,8 +3,8 @@ export const projects = [
         name: "Collabify",
         imageDark: "/Images/second_project(dark).png",
         imageLight: "/Images/second_project(light).png",
-        git: "https://github.com/shabinx30/Unknown",
-        live: "https://unknown.tungstenz.online",
+        git: "https://github.com/shabinx30/Collabify",
+        live: "https://collabify-shabin.vercel.app",
         description:
             "Designed and developed a web platform that connects brands with content creators for paid promotions. Implemented features including user authentication, creator portfolios, search and filtering, booking system, in app messaging, payment processing, and an admin dashboard.",
         techs: [
@@ -46,7 +46,7 @@ export const projects = [
         imageDark: "/Images/convo(dark).png",
         imageLight: "/Images/convo(light).png",
         git: "https://github.com/shabinx30/CHAT_APP",
-        live: "https://chat.tungstenz.online",
+        live: "https://chat-app-taupe-zeta.vercel.app",
         description:
             "Designed a feature-rich chat app with online/offline status, typing indicators, and file sharing. Built with a focus on real time performance and seamless user experience.",
         techs: [
@@ -68,7 +68,7 @@ export const projects = [
         imageDark: "/Images/ums(dark).png",
         imageLight: "/Images/ums(light).png",
         git: "https://github.com/shabinx30/UMS-REACT-NODE",
-        live: "https://ums.tungstenz.online",
+        live: "https://ums-react-node.vercel.app",
         description:
             "Engineered a secure user management system with authentication, user registration, profile management, and admin controls. Implemented protected routes and role-based access control to manage user creation, editing, and deletion efficiently.",
         techs: [
@@ -86,7 +86,7 @@ export const projects = [
         name: "Netflix",
         image: "/Images/netflix_clone.png",
         git: "https://github.com/shabinx30/Netflix_Clone",
-        live: "https://netflix.tungstenz.online",
+        live: "https://netflix-shabin.vercel.app",
         description:
             "Crafted a dynamic video streaming platform with user authentication, movie browsing, trailer viewing, and a personalized favorites section. Focused on delivering a responsive and visually appealing user interface for enhanced user engagement.",
         techs: ["react.js", "tailewind", "firebase", "api"],
@@ -95,7 +95,7 @@ export const projects = [
         name: "OLX",
         image: "/Images/olx_clone.png",
         git: "https://github.com/shabinx30/OLX-Clone",
-        live: "https://olx.tungstenz.online",
+        live: "https://olx-shabin.vercel.app",
         description:
             "Created a responsive online marketplace with user login/signup and product listing capabilities. Prioritized user experience by delivering a sleek, easy-to-navigate interface.",
         techs: ["react.js", "tailewind", "firebase", "api"],
