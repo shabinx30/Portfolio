@@ -11,6 +11,7 @@ const SkillItems = ({ skill }: { skill: string | { name: string; icon: string } 
                 className="w-[1.8em]"
                 src={`https://skillicons.dev/icons?i=${isObject ? skill.icon : skill}`}
                 alt={isObject ? skill.name : skill}
+                loading="lazy"
             />
             {isObject ? skill.name : skill}
         </div>

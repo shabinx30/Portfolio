@@ -46,6 +46,7 @@ const ProjectItem = ({ project }: { project: ProjectType }) => {
                         height={100}
                         src={image || ""}
                         alt="project"
+                        loading="lazy"
                     />
                 </Link>
                 <Link href={project.git} target="_blank">
